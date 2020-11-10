@@ -1,13 +1,54 @@
 <html>
 	<head>
 		<title>Welcome!</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script>
+		
+			function show(id)
+			{
+				closeAllMenus();
+				var div = document.getElementById(id);
+				div.style.display = "block";
+			}
+			
+			function hide(id)
+			{
+				var div = document.getElementById(id);
+				div.style.display = "none";
+			}
+			
+			function closeAllMenus()
+			{
+				hide('projects');
+			}
+		
+		</script>
 	</head>
+	
 	<body>
-		<p>Hello and welcome to my site</p>
-		<p style="font-weight: bold">This sight is likely the best sight ever</p>
-		<p style="font-size: 72; font-family: Comic Sans MS">Here is a picture of the best creature in existence</p>
+		<div id = "header">
+		
+			<div style="float: left">
+			</div>
+			<div style="float: right">
+				Home | <a href="contact.html"> Contact </a>| CV | <a onmouseenter="show('projects')" href="#">Projects</a>
+			</div>
+		
+		</div>
+		<div id="projects" class="allMenus" onmouseleave="hide('projects')">
+			<img src = "images/Buzz uncertain lightyear.png" style="height: 100px">
+		</div>
+		<p><span class = "hobby"> I like videogames</p></span>
+		<p class = "hobby"> New consoles soon, huh?</p>
+		<p class = "hobby"> PC Master Race for the win</p>
+		<p style="font-weight: bold">This site is likely the best site ever</p>
 		<img style="width: 100%; height: 20%"src="images/Buzz uncertain lightyear.png">
+		<p class = "hobby"> I am Buzz Lightyear and I approve this message</p>
 		<p>This <b>is</b> <i>some text</i></p>
 		<p>This is <span style="color: blue">some text</span></p>
+		<div style="background: rgb(128, 128, 128); height: 3rem; padding: 5px">
+			<br>
+			Made by Caleb Nel
+		</div>
 	</body>
 </html>
