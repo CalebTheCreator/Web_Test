@@ -1,0 +1,43 @@
+<html>
+	
+	<head>
+		<title>Some Audio!</title>
+		
+		<script>
+			function start()
+			{
+				alert("I am the negotiator");
+				var clip = new Audio();
+				clip.src = "shot.wav";
+				
+				clip.addEventListener("canplaythrough", function()
+				{
+					alert("Loaded all the audio!");
+					clip.play();
+				});
+				
+				clip.addEventListener("ended", function()
+				{
+					//clip.play();
+				});
+			}
+			
+			function doThisWhenEnded()
+			{
+				alert("The sound has finished now!");
+			}
+		</script>
+		
+	</head>
+	
+	<body>
+		<input href="#" style="width": 500px; height: 200px; type="submit" onclick="start()"></input>
+		
+		<br>
+	
+		<audio id="myAudio" controls>
+			<source src="CANT SAY (Instrumental).mp3" type="audio/mp3">
+		</audio>
+	</body>
+	
+</html>
